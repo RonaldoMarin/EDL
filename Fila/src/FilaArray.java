@@ -7,8 +7,8 @@ public class FilaArray implements IFila {
 
     public FilaArray(int capacidade) {
         this.elementos = new Object[capacidade];
-        this.inicio = -1;
-        this.fim = -1;
+        this.inicio = 0;
+        this.fim = 0;
         this.incremento = 0;
     }
 
@@ -31,7 +31,7 @@ public class FilaArray implements IFila {
         if (isEmpty()){
             throw new FilaVaziaException("Fila se encontra vazia!");
         }
-        Object o = this.elementos[this.inicio + 1];
+        Object o = this.elementos[this.inicio];
         this.inicio = (this.inicio + 1) % this.elementos.length;
         return o;
     }
@@ -41,7 +41,7 @@ public class FilaArray implements IFila {
         if (isEmpty()) {
             throw new FilaVaziaException("Fila se encontra vazia!");
         }
-        return elementos[this.fim];
+        return elementos[this.inicio];
     }
 
     @Override
@@ -66,17 +66,30 @@ public class FilaArray implements IFila {
     // Método apenas para fim educativos
     @Override
     public void imprimirArray(){
-        for (int i = 0; i < this.size(); i++) {
+        for (int i = this.inicio; i < this.size() + this.inicio; i++) {
             System.out.println(this.elementos[i]); 
         }
     }
 
     public static void main(String[] args){
         FilaArray fila = new FilaArray(5);
+        fila.enqueue(3);
         fila.enqueue(1);
+        fila.enqueue(99);
+        fila.enqueue(2);
+        System.out.println("");
         fila.imprimirArray();
-        // System.out.println(fila.dequeue());
+        System.out.println(" ");
+        System.out.println(fila.dequeue());
+        System.out.println(fila.dequeue());
+        System.out.println(fila.dequeue());
         System.out.println("Primeiro elemento: " + fila.first());
+        fila.enqueue(999);
+        fila.enqueue(99);
+        System.out.println("");
+        fila.imprimirArray();
+
+
         System.out.println("Tamanho da fila: " + fila.size()); 
         System.out.println("Está vazia? " + fila.isEmpty()); 
     }
