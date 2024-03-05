@@ -1,9 +1,9 @@
 public interface IFila {
-	    public abstract void enqueue(Object o);
-	    public abstract Object dequeue();
+	    public void enqueue(Object o);
+	    public Object dequeue();
 	    public Object first();
-	    public abstract int size();
-	    public abstract boolean isEmpty();
+	    public int size();
+	    public boolean isEmpty();
 
 		public void imprimirArray();
 }
