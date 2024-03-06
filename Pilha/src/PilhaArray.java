@@ -7,7 +7,7 @@ public class PilhaArray implements Pilha{
     public PilhaArray(int capacidade) { // Construtor para definir a capacidade da pilha
         this.elementos = new Object[capacidade];
         this.topo = -1;
-        this.incremento = 0;
+        this.incremento = 10;
     }
 
     @Override
@@ -74,17 +74,22 @@ public class PilhaArray implements Pilha{
 
     public static void main(String[] args){
         // PilhaArray pilha = new PilhaArray(10);
-        Pilha pilha = new PilhaArray(2);
+        Pilha pilha = new PilhaArray(1);
+        
+        // long begin;
+        long begin = System.currentTimeMillis();
+        // System.out.println(begin);
 
-        for (int i = 0; i < 1025; i++){
+        for (int i = 0; i < 1000000; i++){
             pilha.push(i);
         }
 
-        pilha.imprimirArray();
+        // pilha.imprimirArray();
         System.out.println("Capacidade máxima: " + pilha.tamanhoArray());
         System.out.println("Tamanho da pilha: " + pilha.size()); 
-
-        
+        long end = System.currentTimeMillis();
+        long media = end - begin;
+        System.out.println(media);
 
         // System.out.println("Pilha ta vazia: " + pilha.isEmpty()); 
         // System.out.println("Topo da pilha: " + pilha.top());
