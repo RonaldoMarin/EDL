@@ -63,22 +63,14 @@ public class FilaArray implements IFila {
         return sb.toString();
     }
 
-    // Método apenas para fim educativos
-    @Override
-    public void imprimirArray(){
-        for (int i = this.inicio; i < this.size() + this.inicio; i++) {
-            System.out.println(this.elementos[i]); 
-        }
-    }
-
     public static void main(String[] args){
         FilaArray fila = new FilaArray(5);
         fila.enqueue(3);
         fila.enqueue(1);
         fila.enqueue(99);
         fila.enqueue(2);
+        fila.enqueue(20);
         System.out.println("");
-        fila.imprimirArray();
         System.out.println(" ");
         System.out.println(fila.dequeue());
         System.out.println(fila.dequeue());
@@ -87,7 +79,6 @@ public class FilaArray implements IFila {
         fila.enqueue(999);
         fila.enqueue(99);
         System.out.println("");
-        fila.imprimirArray();
 
 
         System.out.println("Tamanho da fila: " + fila.size()); 

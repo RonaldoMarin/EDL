@@ -4,6 +4,4 @@ public interface IFila {
 	    public Object first();
 	    public int size();
 	    public boolean isEmpty();
-
-		public void imprimirArray();
 }
