@@ -62,15 +62,12 @@ public class FilaArray implements IFila {
         fila.enqueue(99);
         fila.enqueue(2);
         fila.enqueue(20);
-        System.out.println("");
-        System.out.println(" ");
         System.out.println(fila.dequeue());
         System.out.println(fila.dequeue());
         System.out.println(fila.dequeue());
         System.out.println("Primeiro elemento: " + fila.first());
         fila.enqueue(999);
         fila.enqueue(99);
-        System.out.println("");
         System.out.println("Tamanho da fila: " + fila.size()); 
         System.out.println("Está vazia? " + fila.isEmpty()); 
     }
