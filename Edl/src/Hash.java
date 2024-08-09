@@ -1,5 +1,3 @@
-//import java.util.Scanner;
-
 import java.util.Scanner;
 
 public class Hash {
@@ -59,8 +57,6 @@ public class Hash {
 
             options = sc.nextInt();
 
-
-
             if (options == 1){
                 System.out.print("\nDigite um valor para ser inserido: ");
                 novoElemento = sc.nextInt();
@@ -77,27 +73,6 @@ public class Hash {
             }
 
         }
-
         sc.close();
-
-//        int capacidadeDoArray, novoElemento;
-//        Scanner sc = new Scanner(System.in);
-//
-//        System.out.print("Digite um tamanho para seu array: ");
-//        capacidadeDoArray = sc.nextInt();
-//
-//        Hash hash = new Hash(capacidadeDoArray);
-//
-//        int sizeArray = hash.size();
-//        System.out.println("O tamanho do seu array é: " + sizeArray);
-//
-//        System.out.print("Digite um valor para ser inserido: ");
-//        novoElemento = sc.nextInt();
-//
-//        System.out.println("Valor inserido: " + hash.insertHash(novoElemento));
-//
-//        hash.printHashArray();
-//
-//        sc.close();
     }
 }
