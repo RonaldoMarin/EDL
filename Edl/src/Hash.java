@@ -78,6 +78,8 @@ public class Hash {
 
         }
 
+        sc.close();
+
 //        int capacidadeDoArray, novoElemento;
 //        Scanner sc = new Scanner(System.in);
 //
