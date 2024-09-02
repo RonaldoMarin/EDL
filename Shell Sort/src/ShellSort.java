@@ -1,3 +1,5 @@
+
+
 public class ShellSort {
 
     public static void sort(int[] array) {
@@ -15,11 +17,17 @@ public class ShellSort {
     }
 
     public static void main(String[] args) {
-        int[] nums = {1, 12, 312, 4, 0, -2, 22, 13, 4};
-        ShellSort.sort(nums);
-        
+        // int[] nums = {1, 12, 312, 4, 0, -2, 22, 13, 4};
+        int[] vetor = new int[10];
+        System.out.println("Vetor desordenado");
+        for (int i = 0; i < vetor.length; i++){
+            vetor[i] = (int) (Math.random() * vetor.length);
+            System.out.print(vetor[i] + " ");
+        }
+        ShellSort.sort(vetor);
+        System.out.println("\n");
         // Imprimir o array ordenado
-        for (int num : nums) {
+        for (int num : vetor) {
             System.out.print(num + " ");
         }
     }
