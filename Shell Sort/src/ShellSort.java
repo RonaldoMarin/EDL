@@ -34,7 +34,6 @@ public class ShellSort {
         ShellSort.sort(vetor);
         System.out.println("\nVetor ordenado");
 
-        // Imprimir o array ordenado
         for (int num : vetor) {
             System.out.print(num + " ");
         }
